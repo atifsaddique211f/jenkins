@@ -18,5 +18,6 @@ RUN groupadd -g ${DOCKER_GID} docker \
 
 RUN usermod -aG docker jenkins
 
-USER jenkins
+COPY jenkins.sh /usr/local/bin/jenkins.sh
+
 # Here you can install some Jenkins plugins if you want

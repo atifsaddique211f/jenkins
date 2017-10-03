@@ -11,6 +11,18 @@ Jenkins docker image provide the facility to run pipelines inside docker agent.
     ```
     cut -d: -f3 < <(getent group docker)
     ``` 
+    
+    OR Run this command on any unix machine    
+    ```
+    cat /etc/group | grep docker
+    ```
+    
+    It will give you output something like in below format.
+    ```
+    docker:x:999:ubuntu
+    ```
+    In this case `999` is your docker group id.
+    
 * Run docker container like below.   
     Replace `DOCKER_GROUP_ID` with value of docker group id from previous step.
     ```
